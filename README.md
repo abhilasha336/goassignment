@@ -14,6 +14,14 @@ INSTALL GO vrsion above go1.21.6
 RUN COMMAND IN TERMINAL TO DOWNLOAD DEPENDENCIES-> go mod tidy
 RUN COMMAND IN TERMINAL TO RUN A PROGRAM(Note:run it from main.go file directory)-> go run main.go
 
+# REACT dependency
+
+# Run below commands in terminal
+
+cd LRUcache-react-app
+npm install
+npm run dev
+
 # Repo link-> https://github.com/abhilasha336/goassignment
 
 # POSTMAN COLLECTION FILENAME-> LRU Cache Endpoints.postman_collection.json
