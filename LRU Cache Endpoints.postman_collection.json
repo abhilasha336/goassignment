@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "08eaccec-f96b-4864-8df7-8ba9187f9294",
+		"name": "LRU Cache Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14202170"
+	},
+	"item": [
+		{
+			"name": "Post key value in cache",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\":\"abhilash\",\r\n    \"duration\":5000000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/cache/names"
+			},
+			"response": []
+		},
+		{
+			"name": "Get key value from cache",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/cache/names"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete key from cache",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/cache/names"
+			},
+			"response": []
+		}
+	]
+}
