@@ -81,7 +81,7 @@ import (
 	socketio "github.com/googollee/go-socket.io"
 )
 
-var cacheInstance = cache.NewLRUCache(100) // Initialize the cache with capacity
+var cacheInstance = cache.NewLRUCache(2) // Initialize the cache with capacity
 
 func main() {
 	r := gin.Default()
@@ -128,11 +128,10 @@ func main() {
 			return
 		}
 
-		duration := time.Duration(durationSec) * time.Nanosecond
+		duration := time.Duration(durationSec) * time.Second // Change from Nanosecond to Second
 		cacheInstance.Set(c.Param("key"), json.Value, duration)
 		c.JSON(http.StatusCreated, gin.H{"status": "success"})
 	})
-
 	// Endpoint to delete insert key value in cache
 	r.DELETE("/cache/:key", func(c *gin.Context) {
 		cacheInstance.Delete(c.Param("key"))
